@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     uid_t pid, ppid, chpid = -1;
     int write_pipe[2], read_pipe[2];
     char buffer[5001];
-    size_t size, mes_size = 5001, len = 5001;
+    size_t size;
     int input, output;
     message_t result_struct;
 
@@ -183,7 +183,7 @@ int main(int argc, char *argv[])
             //  сначала подготоавливаю строку с результатом, затем пишут его в выходной файл
             char buffer_for_output[50001];
             sprintf(buffer_for_output, "Результат работы программы: \n кол-во цифр:%d \n кол-во букв:%d\n", result_struct.number, result_struct.letter);
-    
+            buffer_for_output[5000] = '\0';
             size = write(output, buffer_for_output, strlen(buffer_for_output));
 
             if (size < 0)
