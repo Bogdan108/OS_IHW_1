@@ -114,7 +114,7 @@ int main(int argc, char *argv[])
             result_struct.number = 0;
             result_struct.letter = 0;
 
-            while (buffer[i] != '\0')
+            while (buffer[i] != '\0' && i < 5001)
             {
                 if (buffer[i] >= '0' && buffer[i] <= '9')
                 {
