@@ -55,9 +55,9 @@ int main(int argc, char *argv[])
         }
 
         // записываю текст в канал
-        size = write(write_pipe[1], buffer, strlen(buffer));
+        size = write(write_pipe[1], buffer, strlen(buffer)+1);
 
-        if (size != strlen(buffer))
+        if (size < 0)
         {
             printf("Can\'t write all string to pipe\n");
             exit(-1);
