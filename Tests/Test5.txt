@@ -1,0 +1,7 @@
+The chip features a unified memory architecture for the CPU and GPU cores and supports up to 24 GB LPDDR5-6400 for a bandwidth of up to 100GB/s.
+
+According to Apple, the M2 offers a 18% higher CPU performance at the same power consumption level compared to the Apple M1. In our tests, the MacBook Pro 13 with active cooling was able to reach the 18% in Geekbench Multi. In other benchmarks we measured 12 to 15% gains compared to the M1. Therefore, the performance is now near the M1 Pro with 8 cores. The passively cooled MacBook Air may however suffer from throttling in longer load scenarios.
+
+The integrated graphics card in the M2 offers 8 or 10 cores and a peak performance of 3.6 TFLOPs.
+
+Furthermore, the SoC integrates a fast 16 core neural engine with a peak performance of 16 TOPS (for AI hardware acceleration), a secure enclave (e.g., for encryption), Thunderbolt / USB 4 controller, an ISP, and media de- and encoders.

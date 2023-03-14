@@ -1,0 +1,3 @@
+Apple M2
+Apple M2
+The Apple M2 is a System on a Chip (SoC) from Apple that is found in the late 2022 MacBook Air and, MacBook Pro 13. It offers 8 cores divided in four performance cores and four power-efficiency cores. The big cores offer 192 KB instruction cache, 128 KB data cache, and 16 MB shared L2 cache (up from 12 MB). The four efficiency cores are a lot smaller and offer only 128 KB instruction cache, 64 KB data cache, and 4 MB shared cache. The efficiency cores (E cluster) clock with  up to 2,4 GHz, the performance cores (P cluster) with up to 3,5 GHz and therefore higher than the M1 cores. The architecture should be similar to the A15 (iPhone 13) with Avalanche and Blizzard cores.

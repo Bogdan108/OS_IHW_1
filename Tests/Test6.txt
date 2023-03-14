@@ -1,0 +1,12 @@
+Compiling a story from VS Code
+The extension adds a button in the toolbar, at the top right of the window, when an Inform 7 file is open. Clicking it will compile the story. If there are errors during the compilation, they are shown in the Problems panel. The openStoryAfterCompilation setting can make the newly compiled story open automatically.
+
+Clicking the button while pressing Alt (or Shift) will release the story for testing.
+
+There's also a "Release" option in the ... menu of the toolbar; all the commands mentioned are also available in the command palette and by right-clicking on an Inform 7 file in the explorer.
+
+Those commands respect the Inform 7 project's settings (story format, binding into a Blorb file, making the random outcomes predictable, Inform version in macOS). You still need to edit these settings in the official Inform IDE for the moment, though.
+
+The extension uses the default location of Inform for finding the compilers. (On Linux, it uses the installation of the command line interface, not the IDE. On macOS, it is only compatible with the interim 2019 release.)
+
+You can override the compilers paths in the settings. (On Windows, this is particularly useful for the external path if your Documents folder is not located in its default location, for example on a disk other that C:; see below.)
