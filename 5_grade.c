@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 
         if (close(write_pipe) < 0)
         {
-            printf("parent: Can\'t close writing side of pipe\n");
+            printf("grandparent: Can\'t close writing side of pipe\n");
             exit(-1);
         }
         printf("Конец работы в читателе\n");
@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
 
             if (close(write_pipe) < 0)
             {
-                printf("child: Can\'t close pipe\n");
+                printf("parent: Can\'t close pipe\n");
                 exit(-1);
             }
             // анализ текста
@@ -145,7 +145,7 @@ int main(int argc, char *argv[])
 
             if (close(read_pipe) < 0)
             {
-                printf("child: Can\'t close pipe\n");
+                printf("parent: Can\'t close pipe\n");
                 exit(-1);
             }
             printf("Конец работы в анализе\n");
@@ -187,7 +187,7 @@ int main(int argc, char *argv[])
             }
 
             //  сначала подготоавливаю строку с результатом, затем пишут его в выходной файл
-            char buffer_for_output[50001];
+            char buffer_for_output[200];
             sprintf(buffer_for_output, "Результат работы программы: \n кол-во цифр:%d \n кол-во букв:%d\n", result_struct.number, result_struct.letter);
 
             size = write(output, buffer_for_output, strlen(buffer_for_output));

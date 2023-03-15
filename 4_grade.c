@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
         printf("Неправильное количество аргументов командной строки\n");
         exit(-1);
     }
-
+    // создаю канал для передачи текста процессу анализа
     pipe(write_pipe);
 
     //  создаю процесс для анализа текста
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
         printf("Работает в процессе для чтения текста\n");
         if (close(write_pipe[0]) < 0)
         {
-            printf("parent: Can\'t close reading side of pipe\n");
+            printf("grandparent: Can\'t close reading side of pipe\n");
             exit(-1);
         }
         // открываю входной файл для чтения
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 
         if (close(write_pipe[1]) < 0)
         {
-            printf("parent: Can\'t close writing side of pipe\n");
+            printf("grandparent: Can\'t close writing side of pipe\n");
             exit(-1);
         }
         printf("Конец работы в читателе\n");
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
     {
         if (chpid == -1)
         {
-            printf("Не удалось запустить новый прпоцесс\n");
+            printf("Can\'t create new process\n");
             exit(-1);
         }
 
@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
             printf("Работает в процессе для анализа текста\n");
             if (close(write_pipe[1]) < 0)
             {
-                printf("child: Can\'t close writing side of pipe\n");
+                printf("parent: Can\'t close writing side of pipe\n");
                 exit(-1);
             }
 
@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
 
             if (close(write_pipe[0]) < 0)
             {
-                printf("child: Can\'t close reading side of pipe\n");
+                printf("parent: Can\'t close reading side of pipe\n");
                 exit(-1);
             }
             // анализ текста
@@ -125,7 +125,7 @@ int main(int argc, char *argv[])
 
             if (close(read_pipe[0]) < 0)
             {
-                printf("child: Can\'t close reading side of pipe\n");
+                printf("parent: Can\'t close reading side of pipe\n");
                 exit(-1);
             }
             // передаю записанные данные в канал
@@ -139,7 +139,7 @@ int main(int argc, char *argv[])
 
             if (close(read_pipe[1]) < 0)
             {
-                printf("child: Can\'t close writing side of pipe\n");
+                printf("parent: Can\'t close writing side of pipe\n");
                 exit(-1);
             }
             printf("Конец работы в анализе\n");
@@ -148,7 +148,7 @@ int main(int argc, char *argv[])
         {
             if (chpid == -1)
             {
-                printf("Не удалось запустить новый прпоцесс\n");
+                printf("Can\'t create new process\n");
                 exit(-1);
             }
 
@@ -181,7 +181,7 @@ int main(int argc, char *argv[])
             }
 
             //  сначала подготоавливаю строку с результатом, затем пишут его в выходной файл
-            char buffer_for_output[50001];
+            char buffer_for_output[200];
             sprintf(buffer_for_output, "Результат работы программы: \n кол-во цифр:%d \n кол-во букв:%d\n", result_struct.number, result_struct.letter);
             size = write(output, buffer_for_output, strlen(buffer_for_output));
 

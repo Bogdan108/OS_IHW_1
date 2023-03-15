@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
 
         if (close(read_pipe) < 0)
         {
-            printf("child: Can\'t close pipe\n");
+            printf("parent: Can\'t close pipe\n");
             exit(-1);
         }
 
@@ -126,7 +126,6 @@ int main(int argc, char *argv[])
             printf("Не удалось запустить новый прпоцесс\n");
             exit(-1);
         }
-
 
         printf("Работает в процессе для анализа текста\n");
 

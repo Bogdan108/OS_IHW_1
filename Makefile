@@ -23,6 +23,12 @@ ninth: 9_grade/9_grade_first.c 9_grade/9_grade_second.c
 delete_fifo:
 	rm read.fifo write.fifo
 
+delete_eigth:
+	rm eigth_first eigth_second
+
+delete_ninth:
+	rm ninth_first ninth_second
+
 test_fourth: fourth
 	./fourth Tests/Test8.txt Tests/Test8_output.txt
 	./fourth Tests/Test2.txt Tests/Test2_output.txt

@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 
         if (close(read_pipe[1]) < 0)
             {
-                printf("child: Can\'t close writing side of pipe\n");
+                printf("parent: Can\'t close writing side of pipe\n");
                 exit(-1);
             }
 
@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
 
             if (close(read_pipe[0]) < 0)
             {
-                printf("child: Can\'t close reading side of pipe\n");
+                printf("parent: Can\'t close reading side of pipe\n");
                 exit(-1);
             }
 
@@ -168,7 +168,7 @@ int main(int argc, char *argv[])
         // передаю записанные данные в канал
         size = write(read_pipe[1], &result_struct, sizeof(result_struct));
 
-        if (size != sizeof(result_struct))
+        if (size < 0)
         {
             printf("Can\'t write all string to pipe\n");
             exit(-1);
