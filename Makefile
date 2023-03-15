@@ -16,6 +16,10 @@ eigth: 8_grade/8_grade_first.c 8_grade/8_grade_second.c
 	gcc 8_grade/8_grade_first.c -o eigth_first
 	gcc 8_grade/8_grade_second.c -o eigth_second
 
+ninth: 9_grade/9_grade_first.c 9_grade/9_grade_second.c
+	gcc 9_grade/9_grade_first.c -o ninth_first
+	gcc 9_grade/9_grade_second.c -o ninth_second
+
 delete_fifo:
 	rm read.fifo write.fifo
 
