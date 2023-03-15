@@ -12,6 +12,10 @@ sixth: 6_grade.c
 seventh: 7_grade.c
 	gcc 7_grade.c -o seventh
 
+eigth: 8_grade/8_grade_first.c 8_grade/8_grade_second.c
+	gcc 8_grade/8_grade_first.c -o eigth_first
+	gcc 8_grade/8_grade_second.c -o eigth_second
+
 
 test_fourth: fourth
 	./fourth Tests/Test8.txt Tests/Test8_output.txt
@@ -23,7 +27,7 @@ test_fourth: fourth
 	./fourth Tests/Test7.txt Tests/Test7_output.txt
 	./fourth Tests/Test1.txt Tests/Test1_output.txt
 	rm fourth
-	
+
 test_fifth: fifth
 	./fifth Tests/Test8.txt Tests/Test8_output.txt
 	./fifth Tests/Test2.txt Tests/Test2_output.txt
@@ -56,3 +60,4 @@ test_seventh: seventh
 	./seventh Tests/Test7.txt Tests/Test7_output.txt
 	./seventh Tests/Test1.txt Tests/Test1_output.txt
 	rm read.fifo write.fifo seventh
+
