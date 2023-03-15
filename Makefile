@@ -16,6 +16,8 @@ eigth: 8_grade/8_grade_first.c 8_grade/8_grade_second.c
 	gcc 8_grade/8_grade_first.c -o eigth_first
 	gcc 8_grade/8_grade_second.c -o eigth_second
 
+delete_fifo:
+	rm read.fifo write.fifo
 
 test_fourth: fourth
 	./fourth Tests/Test8.txt Tests/Test8_output.txt
