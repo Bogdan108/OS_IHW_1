@@ -30,46 +30,46 @@ delete_ninth:
 	rm ninth_first ninth_second
 
 test_fourth: fourth
-	./fourth Tests/Test8.txt Tests/Test8_output.txt
-	./fourth Tests/Test2.txt Tests/Test2_output.txt
-	./fourth Tests/Test3.txt Tests/Test3_output.txt
-	./fourth Tests/Test4.txt Tests/Test4_output.txt
-	./fourth Tests/Test5.txt Tests/Test5_output.txt
-	./fourth Tests/Test6.txt Tests/Test6_output.txt
-	./fourth Tests/Test7.txt Tests/Test7_output.txt
-	./fourth Tests/Test1.txt Tests/Test1_output.txt
+	./test.sh fourth Tests/Test8.txt Tests/Test8_output.txt
+	./test.sh fourth Tests/Test2.txt Tests/Test2_output.txt
+	./test.sh fourth Tests/Test3.txt Tests/Test3_output.txt
+	./test.sh fourth Tests/Test4.txt Tests/Test4_output.txt
+	./test.sh fourth Tests/Test5.txt Tests/Test5_output.txt
+	./test.sh fourth Tests/Test6.txt Tests/Test6_output.txt
+	./test.sh fourth Tests/Test7.txt Tests/Test7_output.txt
+	./test.sh fourth Tests/Test1.txt Tests/Test1_output.txt
 	rm fourth
 
 test_fifth: fifth
-	./fifth Tests/Test8.txt Tests/Test8_output.txt
-	./fifth Tests/Test2.txt Tests/Test2_output.txt
-	./fifth Tests/Test3.txt Tests/Test3_output.txt
-	./fifth Tests/Test4.txt Tests/Test4_output.txt
-	./fifth Tests/Test5.txt Tests/Test5_output.txt
-	./fifth Tests/Test6.txt Tests/Test6_output.txt
-	./fifth Tests/Test7.txt Tests/Test7_output.txt
-	./fifth Tests/Test1.txt Tests/Test1_output.txt
+	./test.sh fifth Tests/Test8.txt Tests/Test8_output.txt
+	./test.sh fifth Tests/Test2.txt Tests/Test2_output.txt
+	./test.sh fifth Tests/Test3.txt Tests/Test3_output.txt
+	./test.sh fifth Tests/Test4.txt Tests/Test4_output.txt
+	./test.sh fifth Tests/Test5.txt Tests/Test5_output.txt
+	./test.sh fifth Tests/Test6.txt Tests/Test6_output.txt
+	./test.sh fifth Tests/Test7.txt Tests/Test7_output.txt
+	./test.sh fifth Tests/Test1.txt Tests/Test1_output.txt
 	rm read.fifo write.fifo fifth
 
 test_sixth: sixth
-	./sixth Tests/Test8.txt Tests/Test8_output.txt
-	./sixth Tests/Test2.txt Tests/Test2_output.txt
-	./sixth Tests/Test3.txt Tests/Test3_output.txt
-	./sixth Tests/Test4.txt Tests/Test4_output.txt
-	./sixth Tests/Test5.txt Tests/Test5_output.txt
-	./sixth Tests/Test6.txt Tests/Test6_output.txt
-	./sixth Tests/Test7.txt Tests/Test7_output.txt
-	./sixth Tests/Test1.txt Tests/Test1_output.txt
+	./test.sh sixth Tests/Test1.txt Tests/Test1_output.txt
+	./test.sh sixth Tests/Test8.txt Tests/Test8_output.txt
+	./test.sh sixth Tests/Test2.txt Tests/Test2_output.txt
+	./test.sh sixth Tests/Test3.txt Tests/Test3_output.txt
+	./test.sh sixth Tests/Test4.txt Tests/Test4_output.txt
+	./test.sh sixth Tests/Test5.txt Tests/Test5_output.txt
+	./test.sh sixth Tests/Test6.txt Tests/Test6_output.txt
+	./test.sh sixth Tests/Test7.txt Tests/Test7_output.txt
 	rm sixth
 
 test_seventh: seventh
-	./seventh Tests/Test8.txt Tests/Test8_output.txt
-	./seventh Tests/Test2.txt Tests/Test2_output.txt
-	./seventh Tests/Test3.txt Tests/Test3_output.txt
-	./seventh Tests/Test4.txt Tests/Test4_output.txt
-	./seventh Tests/Test5.txt Tests/Test5_output.txt
-	./seventh Tests/Test6.txt Tests/Test6_output.txt
-	./seventh Tests/Test7.txt Tests/Test7_output.txt
-	./seventh Tests/Test1.txt Tests/Test1_output.txt
+	./test.sh seventh Tests/Test8.txt Tests/Test8_output.txt
+	./test.sh seventh Tests/Test2.txt Tests/Test2_output.txt
+	./test.sh seventh Tests/Test3.txt Tests/Test3_output.txt
+	./test.sh seventh Tests/Test4.txt Tests/Test4_output.txt
+	./test.sh seventh Tests/Test5.txt Tests/Test5_output.txt
+	./test.sh seventh Tests/Test6.txt Tests/Test6_output.txt
+	./test.sh seventh Tests/Test7.txt Tests/Test7_output.txt
+	./test.sh seventh Tests/Test1.txt Tests/Test1_output.txt
 	rm read.fifo write.fifo seventh
 

@@ -1,6 +1,7 @@
 #!/bin/bash
+touch out.txt
 
-./$1 < $2 > out.txt
+./$1 $2 out.txt
 
 d=$(diff out.txt $3)
 
