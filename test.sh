@@ -13,4 +13,5 @@ else
     echo "$d"
 fi
 
+
 rm out.txt
