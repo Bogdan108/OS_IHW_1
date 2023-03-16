@@ -1,4 +1,4 @@
-.PHONY: testASM
+
 
 fourth: 4_grade.c
 	gcc 4_grade.c -o fourth
